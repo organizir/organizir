@@ -6,5 +6,5 @@ import Html.Attributes exposing (..)
 
 organizerFooter : Html a
 organizerFooter =
-    div [ class "jumbotron" ]
+    div [ class "footer jumbotron" ]
         [ h4 [] [ text "Organizer.io" ] ]
