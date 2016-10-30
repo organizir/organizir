@@ -1,5 +1,7 @@
 module App.Messages exposing (..)
 
+import Event.Messages
+
 
 type Msg
-    = NoOp
+    = EventMsg Event.Messages.Msg

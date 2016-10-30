@@ -1,15 +1,15 @@
 module Main exposing (..)
 
-import App.Update as Update exposing (..)
-import App.View as View exposing (..)
+import App.Update as Update exposing (update)
+import App.View as View exposing (view)
 import App.Messages exposing (Msg(..))
-import App.Models exposing (..)
+import App.Models exposing (Model, initialModel)
 import Html.App
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( {}
+    ( initialModel
     , Cmd.none
     )
 
@@ -23,7 +23,7 @@ main : Program Never
 main =
     Html.App.program
         { init = init
-        , update = Update.update
-        , view = View.view
+        , update = update
+        , view = view
         , subscriptions = subscriptions
         }

@@ -4,8 +4,8 @@ import Event.Messages exposing (Msg(..))
 import Event.Models exposing (..)
 
 
-update : Msg -> List Event -> ( List Event, Cmd Msg )
-update message events =
+update : Msg -> Event -> ( Event, Cmd Msg )
+update message event =
     case message of
         NoOp ->
-            ( events, Cmd.none )
+            ( event, Cmd.none )
